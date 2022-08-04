@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/control_utils/control_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/drawing_utils/drawing_utils.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.2.0/p5.js"></script>
+
+  <script> 
+    let prev_draw_x1=null;
+    let prev_draw_y1=null
+    let prev_draw_x2=null
+    let prev_draw_y2=null
+    let prev_draw_x3=null
+    let prev_draw_y3=null
+    let prev_draw_x4 =null;
+    let prev_draw_y4=null;
+    let prev_draw_x5 =null;
+    let prev_draw_y5=null;
+
+    let color="없음";
+
+    </script> 
+  
+  <script defer language="javascript" type="text/javascript" src="detection.js"></script>
+  <script defer language="javascript" type="text/javascript" src="sketch.js"></script>
+
+</head>
+
+  
+  
+  
+<body>
+    <div class="parent">
+        <div class="first"><video controls="false" class="input_video"></video>
+        </div>
+        <div class="second"><canvas class="output_canvas" width="450px" height="250px"></canvas></div>
+        <div class="third">
+<div class="box_red">빨간</div>
+<div class="box_green">초록</div>
+<div class="box_blue">파란</div>
+<div class="box_black">검정</div>
+<div class="box_white">지우개</div>
+</div>
+</div>
+<div><span id="brother"></span></div>
+
+
+
+
+
+  <div style="border: 1px solid reed; float: left; width: 25%;">
+</div>
+
+<div style="border: 1px solid red; float: right; width: 25%;">
+</div>
+
+
+</body>
+ <style>
+video {
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+}
+
+.output_canvas{
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+} 
+
+.parent{
+    width: 90%;
+    margin: 0px ;
+    display: flex;
+}
+
+.first {
+    border: 1px solid red;
+    flex:1;
+    width:30%;
+    box-sizing: border-box;
+}
+
+.second{
+    border: 1px solid green;
+    flex:1;
+    margin: 0px ;
+    width:30%;
+    box-sizing: border-box;
+}
+
+.third{
+    border: 1px solid blue;
+    flex:2;
+    float:middle;
+    right:20px;
+    width:100%;
+    box-sizing: border-box;
+}
+
+
+div.box_red {
+  height: 50px;
+  text-align: center;
+  background-color: red;}
+
+  div.box_green {
+  height: 50px;
+  text-align: center;
+
+  background-color:green;}
+
+div.box_blue {
+  height: 50px;
+  text-align: center;
+  background-color: blue ;}
+
+div.box_black {
+  height: 50px;
+  text-align: center;
+  background-color: black;}
+
+  div.box_white {
+  height: 50px;
+  text-align: center;
+  background-color: white}
+
+
+
+</style>
+
+
+
+</html>
